@@ -13,6 +13,7 @@
 
         <!-- spring版本号 -->
         <spring.version>4.2.5.RELEASE</spring.version>
+        <netty.version>4.1.31.Final</netty.version>
     </properties>
 
     <!--设置每个模块的jdk版本都是1.8-->
@@ -138,6 +139,12 @@
             <groupId>org.apache.maven.plugins</groupId>
             <artifactId>maven-war-plugin</artifactId>
             <version>3.0.0</version>
+        </dependency>
+        <!-- netty框架 -->
+        <dependency>
+            <groupId>io.netty</groupId>
+            <artifactId>netty-all</artifactId>
+            <version>${netty.version}</version>
         </dependency>
     </dependencies>
 

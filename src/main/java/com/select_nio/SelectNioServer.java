@@ -30,6 +30,7 @@ public class SelectNioServer {
         ssc.register(selector, ssc.validOps());
 
         while (true) {
+            // 一次select会把所有感兴趣的时间都查询出来。
             int readyCount = selector.select(1000);
             if(readyCount==0){
                 continue;
