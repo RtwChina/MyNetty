@@ -65,8 +65,8 @@ public class NettyServer {
             ChannelFuture f = b.bind(port).sync(); //5
 
 
-            CuratorFramework client = ZookeeperFactory.create();
-            InetAddress inetAddress = InetAddress.getLocalHost();
+//            CuratorFramework client = ZookeeperFactory.create();
+//            InetAddress inetAddress = InetAddress.getLocalHost();
             // 去Zookeper注册一个临时的文件夹，文件名为当前server地址,当server与Zk的回话结束时，该节点就会自己消失。
 //            client.create().withMode(CreateMode.EPHEMERAL).forPath(Constants.SERVER_PATH + inetAddress.getHostAddress());
             logger.info("开始监听{}端口", port);
